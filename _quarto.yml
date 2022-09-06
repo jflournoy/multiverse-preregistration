@@ -2,20 +2,24 @@ project:
   type: site
 
 site:
-  title: "flux2022_website"
+  title: "Prereg the Multiverse"
   navbar:
     type: dark
-    background: primary
+    background: light
     left:
       - href: index.qmd
         text: Home
       - preregistration-guide.qmd
+      - preregistration-example.qmd
+      - href: https://dcosme.shinyapps.io/explore-sca/
+        text: Shiny App
+  repo-url: https://github.com/jflournoy/multiverse-preregistration
+  repo-actions: [edit, issue]
 
 format:
   html:
-    theme: solar
+    theme: simplex
     css: styles.css
     toc: true
-
 
 

@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang=""><head>
+  <meta charset="utf-8">
+  <meta name="generator" content="quarto-0.2.214">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Prereg the Multiverse - Preregistration guide</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+    }
+    .hanging div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }
+  </style>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+  <script src="site_libs/quarto-nav/quarto-nav.js"></script>
+  <script src="site_libs/quarto-nav/headroom.min.js"></script>
+  <script src="site_libs/clipboard/clipboard.min.js"></script>
+  <meta name="quarto:offset" content="./">
+  <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+  <script src="site_libs/quarto-search/fuse.min.js"></script>
+  <script src="site_libs/quarto-search/quarto-search.js"></script>
+  <script src="site_libs/quarto-html/quarto.js"></script>
+  <script src="site_libs/quarto-html/popper.min.js"></script>
+  <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+  <script src="site_libs/quarto-html/anchor.min.js"></script>
+  <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+  <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet">
+  <script src="site_libs/bootstrap/bootstrap.min.js"></script>
+  <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+  <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+  <script id="quarto-search-options" type="application/json">{
+    "location": "navbar",
+    "copy-button": false,
+    "collapse-after": 2,
+    "panel-placement": "end",
+    "type": "overlay",
+    "limit": 20
+  }</script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="quarto-search-results"></div>
+<header id="quarto-header" class="headroom fixed-top">
+<nav class="navbar navbar-expand-lg navbar-light ">
+    <div class="container-fluid">
+  <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Prereg the Multiverse</span>
+  </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html">Home</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./preregistration-guide.html" aria-current="page">Preregistration guide</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./preregistration-example.html">Preregistration Example</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://dcosme.shinyapps.io/explore-sca/">Shiny App</a>
+  </li>  
+</ul>
+          <div id="quarto-search" class="mb-0 " title="Search">
+</div>
+      </div> <!-- /navcollapse -->
+  </div> <!-- /container-fluid -->
+</nav>
+</header>
+ <!-- /navbar/sidebar -->
+<div class="container-fluid quarto-container d-flex flex-column page-layout-article" id="quarto-content">
+<div class="row flex-fill">
+  <div id="quarto-toc-sidebar" class=" pt-0 col col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-toc order-last"><nav id="TOC" role="doc-toc">
+<h2 id="toc-title">On this page</h2>
+<ul>
+<li><a href="#sec-research-question" class="nav-link active" data-scroll-target="#sec-research-question"> <span class="header-section-number">1</span> Research question (construct-level)</a></li>
+<li><a href="#decisions" class="nav-link" data-scroll-target="#decisions"> <span class="header-section-number">2</span> Decisions</a>
+<ul class="collapse">
+<li><a href="#covariates-other-constucts" class="nav-link" data-scroll-target="#covariates-other-constucts"> <span class="header-section-number">2.1</span> Covariates (other constucts)</a></li>
+<li><a href="#causal-models" class="nav-link" data-scroll-target="#causal-models"> <span class="header-section-number">2.2</span> Causal model(s)</a></li>
+<li><a href="#measurements-of-constructs" class="nav-link" data-scroll-target="#measurements-of-constructs"> <span class="header-section-number">2.3</span> Measurements of constructs</a></li>
+<li><a href="#processing-of-measurements" class="nav-link" data-scroll-target="#processing-of-measurements"> <span class="header-section-number">2.4</span> Processing of measurements</a></li>
+<li><a href="#sample-composition" class="nav-link" data-scroll-target="#sample-composition"> <span class="header-section-number">2.5</span> Sample composition</a></li>
+<li><a href="#other-decisions" class="nav-link" data-scroll-target="#other-decisions"> <span class="header-section-number">2.6</span> Other decisions</a></li>
+</ul></li>
+<li><a href="#decision-types" class="nav-link" data-scroll-target="#decision-types"> <span class="header-section-number">3</span> Decision types</a>
+<ul class="collapse">
+<li><a href="#sec-type-u-comps" class="nav-link" data-scroll-target="#sec-type-u-comps"> <span class="header-section-number">3.1</span> Statistical comparison of Type U decisions</a></li>
+<li><a href="#organizing-the-multiverse" class="nav-link" data-scroll-target="#organizing-the-multiverse"> <span class="header-section-number">3.2</span> Organizing the multiverse</a></li>
+</ul></li>
+<li><a href="#model-definitions" class="nav-link" data-scroll-target="#model-definitions"> <span class="header-section-number">4</span> Model definitions</a></li>
+<li><a href="#sec-criterion" class="nav-link" data-scroll-target="#sec-criterion"> <span class="header-section-number">5</span> Criterion of interest</a></li>
+<li><a href="#interpretation-and-decision-process" class="nav-link" data-scroll-target="#interpretation-and-decision-process"> <span class="header-section-number">6</span> Interpretation and Decision process</a></li>
+<li><a href="#references" class="nav-link" data-scroll-target="#references"> <span class="header-section-number">7</span> References</a></li>
+</ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/jflournoy/multiverse-preregistration/edit/main/preregistration-guide.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/jflournoy/multiverse-preregistration/issues/new" class="toc-action">Report an issue</a></p></div></div></nav></div>
+  <div class="col mx-auto col-sm-12 col-md-9 col-lg-8 col-xl-7 px-lg-4 pe-xxl-4 ps-xxl-0">
+<main>
+<header id="title-block-header">
+<h1 class="title display-7">Preregistration guide</h1>
+</header>
+
+<p>Note that developing a specification curve analysis / multiverse analysis (SCA/MVA) will likely require an extensive review of existing literature to see how reasonable researchers may differently characterized the associations of interest. If you are developing this analysis after a study has been designed and data collected, it may be the case that your particular data set does not instantiate all of the possible reasonable specifications. To optimize transparency, it can be useful in the registration and in subsequent analyses and reports to be able to speak to the portions of the multiverse not covered.</p>
+<p>The steps below may not be fully linear! In other words, if you start at the top and work your way down, you may find yourself revisiting previous steps. This is okay and good.</p>
+<section id="sec-research-question" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Research question (construct-level)</h1>
+<p>This is where you can specify your research question, e.g., “What is the association between screen-time and adolescent mental health?”</p>
+<ol type="1">
+<li>What is the association or associations of primary interest?</li>
+<li>What construct is the independent variable, cause, or treatment?</li>
+<li>What construct is the dependent variable, effect, or outcome?</li>
+</ol>
+<p>This is a crucial step, as it will strongly determine the criterion type you choose to compare across specifications (see <a href="#sec-criterion">sec.&nbsp;5</a>). You may also need to clarify this after considering some certain decision points and discovering that they represent comparisons of interest rather than specifications against which we test robustness (see <a href="#sec-type-u-comps">sec.&nbsp;3.1</a>).</p>
+</section>
+<section id="decisions" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Decisions</h1>
+<section id="covariates-other-constucts" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="covariates-other-constucts"><span class="header-section-number">2.1</span> Covariates (other constucts)</h2>
+<ol type="1">
+<li>What are other constructs that are involved in, or somehow affect, the associations of interest?
+<ul>
+<li>These could be mediators, moderators, confounds, or constructs that impact the effects, even if they don’t impact the causes</li>
+<li>These other constructs may be from competing causal models—we’ll tackle this below.</li>
+</ul></li>
+<li>List these…</li>
+</ol>
+</section>
+<section id="causal-models" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="causal-models"><span class="header-section-number">2.2</span> Causal model(s)</h2>
+<p>The variables you’ve listed above may play different roles in different causal models.</p>
+<ol type="1">
+<li>What is the causal flow between the causes and the effects? <span class="citation" data-cites="cinelli2020">(<a href="#ref-cinelli2020" role="doc-biblioref">Cinelli, Forney, and Pearl 2020</a>)</span></li>
+<li>Are there mediators involved, i.e., does the cause impact the effect in part via its effect on an intermediate construct?</li>
+<li>Are there confounders involved? Is there a construct that causes both the cause and effect of interest?</li>
+<li>Are there moderators of the cause’s impact on the effect, i.e., are there constructs that change how much the cause impacts the effect?</li>
+<li>If you (and theory, and the literature) are uncertain about what role a construct plays, it is likely there are competing causal models.</li>
+<li>Write out all reasonable, plausible, causal models. It may be helpful to create a diagram in a graphical program (InkScape, LucidChart, PowerPoint, Adobe Illustrator) or using the ggdag package in R.</li>
+</ol>
+</section>
+<section id="measurements-of-constructs" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="measurements-of-constructs"><span class="header-section-number">2.3</span> Measurements of constructs</h2>
+<ol type="1">
+<li>Are the constructs identified above measured in your data set? If you’re designing a new study, how will these constructs be measured?</li>
+<li>Are there multiple measurement instruments a reasonable researcher could use? Have you already collected measurements of constructs using multiple different instruments?</li>
+<li>List these…</li>
+</ol>
+</section>
+<section id="processing-of-measurements" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="processing-of-measurements"><span class="header-section-number">2.4</span> Processing of measurements</h2>
+<ol type="1">
+<li>Is it possible to score your instruments in meaningfully different ways?</li>
+<li>Is it possible to derive different metrics of the same construct from your behavioral data?</li>
+<li>Are there different preprocessing steps that people could apply to behavioral data?</li>
+<li>List these…</li>
+</ol>
+</section>
+<section id="sample-composition" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="sample-composition"><span class="header-section-number">2.5</span> Sample composition</h2>
+<p>Are there different ways to construct the sample?</p>
+<ol type="1">
+<li>Inclusion and exclusion criteria?</li>
+<li>Data quality cutoffs?</li>
+<li>List these…</li>
+</ol>
+</section>
+<section id="other-decisions" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="other-decisions"><span class="header-section-number">2.6</span> Other decisions</h2>
+<p>It’s possible the above set of headings is not exaustive. Include other decisions as well.</p>
+</section>
+</section>
+<section id="decision-types" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Decision types</h1>
+<p>Here, we will use the framework of <span class="citation" data-cites="giudice2021">Giudice and Gangestad (<a href="#ref-giudice2021" role="doc-biblioref">2021</a>)</span> to group these various decision points into three types. What we do next, depends on this categorization,</p>
+<p>The three types of analytic decisions are</p>
+<ol type="1">
+<li>Equivalent (Type E): the decision options are expected to be (evidently and conceptually), arbitrary and effectively the same.
+<ul>
+<li>Example: two equally valid measures of depression.</li>
+<li>Importantly, what constitutes a decision between equivalent options is often best derived from what is left over after considering the next two categories.</li>
+</ul></li>
+<li>Non-equivalent (Type N): the decision options are not equally good choices, or they differ in important conceptual respects.
+<ul>
+<li>Measurement non-equivalence: primarily validity and reliability differences.</li>
+<li>Power/precision non-equivalence: differences that effect estimation precision, e.g., exclusion criteria, and inclusion of certain types of covariates.</li>
+<li>Effect non-equivalence: differences in the effect being measured, including differences in the implied causal model, and interaction effects.</li>
+</ul></li>
+<li>Uncertain-equivalence (Type U): the decision options are not clearly non-equivalent, but there is not enough evidential or conceptual clarity to say that they are or should be equivalent.</li>
+</ol>
+<section id="sec-type-u-comps" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="sec-type-u-comps"><span class="header-section-number">3.1</span> Statistical comparison of Type U decisions</h2>
+<p>Some decision points invite comparisons between competing options that may be evaluated using existing statistical tools. In our <a href="@preregistration-example.qmd">preregistration example</a>, we were interested in how pubertal development relates to neural activation during self-referential processing in the “social brain”. We started out identifying choice of region of interest in the social brain as a potential Type U decision. Does it matter whether we use data from ventro-medial prefrontal cortext (vmPFC) or posterior cingulate cortex (PCC)? Instead of examining several different multiverses for each ROI to examine the robustness of the effect size or significance of our association of interest, we could test this question in a model-based way. This becomes an overarching research question upon which our primary question depends, and we can examine the robustness of the answer to this question across our multiverse of decisions.</p>
+<ol type="1">
+<li>Is it possible to adjudicate between options in some Type U decisions using model comparison or other common statistical tools?</li>
+<li>List these Type U decisions.</li>
+<li>Consider amending <a href="#sec-research-question">sec.&nbsp;1</a> in light of this new information.</li>
+</ol>
+</section>
+<section id="organizing-the-multiverse" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="organizing-the-multiverse"><span class="header-section-number">3.2</span> Organizing the multiverse</h2>
+<p>Using the above categories, <span class="citation" data-cites="giudice2021">Giudice and Gangestad (<a href="#ref-giudice2021" role="doc-biblioref">2021</a>)</span> suggest the following approach:</p>
+<ol type="1">
+<li>Type N: only the best option from non-equivalent decisions should be kept, in which case these decisions will not expand the set of analyses in the multiverse. In cases where the best option is not known (e.g., the correct causal model), it might make sense to examine the criterion (see below) for each option across separate multiverse analyses.<br>
+</li>
+<li>Type U: each option should be used to generate a separate multiverse.</li>
+<li>Type E: the different possible combinations of options for these decisions will create the set of analayses for each multiverse.</li>
+</ol>
+<p>Using the above organizational strategy, describe, your mutliverse. To get a sense of the size of the set of the analyses in the multiverse, multiply the number of options for each decision together. If there are two Type E decisions each with three options, and one Type U decision, with two options, we would have two separate multiverses, each with <span class="math inline">\(3\times 3 = 9\)</span> observations of the criterion.</p>
+<p>It can be helpful to describe using language like</p>
+<blockquote class="blockquote">
+<p>We will define a number of multiverses using the combination of Type U <em>Factor I</em> (3 options) and Type N <em>Factor J</em> (5 options), for a total of 10. Within each multiverse, analytic specifications comprise combinations of Type E <em>Factor K</em> (3 options), <em>Factor L</em> (2 options), and <em>Factor Q</em> (6 options) for a total of 36.</p>
+</blockquote>
+</section>
+</section>
+<section id="model-definitions" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Model definitions</h1>
+<p>If there is only a single multiverse, it is likely that you will have a single model to describe here. Some Type U and Type N decisions that would lead to examining several multiverses could require different models. Specify each model here. A table might be helpful.</p>
+</section>
+<section id="sec-criterion" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Criterion of interest</h1>
+<p>Options include</p>
+<ul>
+<li>Effect size and confidence interval (CI)</li>
+<li>Statistical significance (<em>p</em>-value)</li>
+<li>Model comparison</li>
+<li>Or any other thing you can think of…</li>
+</ul>
+<p>If your research question has to do with the strength of association between two variables, or even simply if that association is positive or negative, the effect size with CI is a good choice. If you are interested in whether there is a detectable association at all, you could use <em>p</em>-values (though this is generally less useful than other options and is not recommended, as the same information plus more can be gotten from the effect size with CI). If you are wondering whether the effect size is different depending on the level of some other variable (moderation, or interaction; see <a href="#sec-type-u-comps">sec.&nbsp;3.1</a>), model comparison statistics like AIC can be useful.</p>
+</section>
+<section id="interpretation-and-decision-process" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> Interpretation and Decision process</h1>
+<p>How will you describe the results of your multiverse analysis and interpret the results? Is your criterion of interest consistent across all Type E decisions? Is there variation across Type N and Type U decisions? Some authors have proposed methods for statistical comparisons between multiverses <span class="citation" data-cites="simonsohn2020">(<a href="#ref-simonsohn2020" role="doc-biblioref">Simonsohn, Simmons, and Nelson 2020</a>)</span>. Others caution against the probabilistic interpretation of multiverse analyses these methods require <span class="citation" data-cites="giudice2021">(<a href="#ref-giudice2021" role="doc-biblioref">Giudice and Gangestad 2021</a>)</span>, opting instead to describe them as “possibilistic. <span class="citation" data-cites="hall2022">(<a href="#ref-hall2022" role="doc-biblioref">Hall et al. 2022</a>)</span>” Since we are uncertain about the single best analytic plan, it is possible that any single one of the results from the multiverse is the closest to the truth.</p>
+<p>Consider the following points when planning your interpretations:</p>
+<ol type="1">
+<li>How will you define the “consistency” of your criterion?</li>
+<li>For each multiverse, is the criterion consistent across Type E decisions?
+<ul>
+<li>If results are inconsistent, this may mean that some auxiliary assumptions in your research domain should be more deeply evaluated, and can be an important contribution.</li>
+</ul></li>
+<li>Across multiverses, is the criterion consistent across Type U decisions?
+<ul>
+<li>This may be evidence that pushes Type U decisions more toward Type E or Type N decisions.</li>
+</ul></li>
+<li>How will the results of this multivese analysis inform future research on this domain?</li>
+</ol>
+</section>
+<section id="references" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> References</h1>
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-cinelli2020" class="csl-entry" role="doc-biblioentry">
+Cinelli, Carlos, Andrew Forney, and Judea Pearl. 2020. <span>“A <span>Crash Course</span> in <span>Good</span> and <span>Bad Controls</span>.”</span> <em>SSRN Electronic Journal</em>. <a href="https://doi.org/10.2139/ssrn.3689437">https://doi.org/10.2139/ssrn.3689437</a>.
+</div>
+<div id="ref-giudice2021" class="csl-entry" role="doc-biblioentry">
+Giudice, Marco Del, and Steven W. Gangestad. 2021. <span>“A <span>Traveler</span>’s <span>Guide</span> to the <span>Multiverse</span>: <span>Promises</span>, <span>Pitfalls</span>, and a <span>Framework</span> for the <span>Evaluation</span> of <span>Analytic Decisions</span>.”</span> <em>Advances in Methods and Practices in Psychological Science</em> 4 (1): 251524592095492. <a href="https://doi.org/10.1177/2515245920954925">https://doi.org/10.1177/2515245920954925</a>.
+</div>
+<div id="ref-hall2022" class="csl-entry" role="doc-biblioentry">
+Hall, Brian D., Yang Liu, Yvonne Jansen, Pierre Dragicevic, Fanny Chevalier, and Matthew Kay. 2022. <span>“A <span>Survey</span> of <span>Tasks</span> and <span>Visualizations</span> in <span>Multiverse Analysis Reports</span>.”</span> <em>Computer Graphics Forum</em> 41 (1): 402–26. <a href="https://doi.org/10.1111/cgf.14443">https://doi.org/10.1111/cgf.14443</a>.
+</div>
+<div id="ref-simonsohn2020" class="csl-entry" role="doc-biblioentry">
+Simonsohn, Uri, Joseph P. Simmons, and Leif D. Nelson. 2020. <span>“Specification Curve Analysis.”</span> <em>Nature Human Behaviour</em>, July. <a href="https://doi.org/10.1038/s41562-020-0912-z">https://doi.org/10.1038/s41562-020-0912-z</a>.
+</div>
+</div>
+
+
+</section>
+<script type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    setTimeout(function() {
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    window.tippy(el, {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    }); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+</main>
+<div class="page-navigation ">
+  <div class="nav-page nav-page-previous">
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</div>
+</div> <!-- /main column -->
+</div> <!-- /row -->
+</div> <!-- /container fluid -->
+
+
+</body></html>

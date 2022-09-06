@@ -1,0 +1,10 @@
+---
+title: "Pre-registration of Multiverse Analyses"
+---
+
+Presenting author: Dr. John Flournoy
+
+Co-authors (alphabetical): Dr. Marjolein Barendse, Dr. Michelle Byrne, Dr. Danielle Cosme, Dr. Jennifer Pfeifer
+
+
+This website provides a template and example preregistration for a multiverse analysis. Within the template is a helpful guide for planning your analyses. The example is from a larger paper in progress using real developmental cognitive neuroimaging data. Finally, we provide a shiny app to showcase some of the results from this example.
