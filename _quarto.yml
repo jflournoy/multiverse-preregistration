@@ -1,0 +1,21 @@
+project:
+  type: site
+
+site:
+  title: "flux2022_website"
+  navbar:
+    type: dark
+    background: primary
+    left:
+      - href: index.qmd
+        text: Home
+      - preregistration-guide.qmd
+
+format:
+  html:
+    theme: solar
+    css: styles.css
+    toc: true
+
+
+
