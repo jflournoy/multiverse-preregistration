@@ -63,10 +63,87 @@
     "text": "Using the above categories, Giudice and Gangestad (2021) suggest the following approach:\n\nType N: only the best option from non-equivalent decisions should be kept, in which case these decisions will not expand the set of analyses in the multiverse. In cases where the best option is not known (e.g., the correct causal model), it might make sense to examine the criterion (see below) for each option across separate multiverse analyses.\n\nType U: each option should be used to generate a separate multiverse.\nType E: the different possible combinations of options for these decisions will create the set of analayses for each multiverse.\n\nUsing the above organizational strategy, describe, your mutliverse. To get a sense of the size of the set of the analyses in the multiverse, multiply the number of options for each decision together. If there are two Type E decisions each with three options, and one Type U decision, with two options, we would have two separate multiverses, each with \\(3\\times 3 = 9\\) observations of the criterion.\nIt can be helpful to describe using language like\n\nWe will define a number of multiverses using the combination of Type U Factor I (3 options) and Type N Factor J (5 options), for a total of 10. Within each multiverse, analytic specifications comprise combinations of Type E Factor K (3 options), Factor L (2 options), and Factor Q (6 options) for a total of 36."
   },
   {
-    "objectID": "preregistration-example.html",
-    "href": "preregistration-example.html",
+    "objectID": "preregistration-example.html#covariates-other-constucts",
+    "href": "preregistration-example.html#covariates-other-constucts",
     "title": "Preregistration Example",
+    "section": "2.1 Covariates (other constucts)",
+    "text": "N/A"
+  },
+  {
+    "objectID": "preregistration-example.html#causal-models",
+    "href": "preregistration-example.html#causal-models",
+    "title": "Preregistration Example",
+    "section": "2.2 Causal model(s)",
+    "text": "N/A"
+  },
+  {
+    "objectID": "preregistration-example.html#measurements-of-constructs",
+    "href": "preregistration-example.html#measurements-of-constructs",
+    "title": "Preregistration Example",
+    "section": "2.3 Measurements of constructs",
+    "text": "2.3.1 Self-referential processing contrast\nThe task consisted of self-referential processing of\n\nprosocial\nanti-social\nand withdrawn\n\ntrait descriptors, contrasted against these same adjectives in a non-social setting.\n\n\n2.3.2 fMRI Data\nBOLD contrast estimates from a self-evaluation task while undergoing functional neuroimaging (Barendse et al. 2020).\nMean contrast estimates from each participant at each wave were extracted from\n\npgACC\nsgACC\nvmPFC\nPCC\n\n\n\n2.3.3 Pubertal development\n\nPubertal Development Scale\nTanner Stage Line Drawings 3, Salivary DHEA\nSalivary testosterone\nSalivary estradiol"
+  },
+  {
+    "objectID": "preregistration-example.html#processing-of-measurements",
+    "href": "preregistration-example.html#processing-of-measurements",
+    "title": "Preregistration Example",
+    "section": "2.4 Processing of measurements",
+    "text": "2.4.1 ROI Atlas\nWe extracted data from ROIs defined from parcels using\n\nHCP atlas\nSchaefer 400 atlas\n\n\n\n2.4.2 Motion regressors\nWe included a motion “trash” regressor in the first-level modeling defined by\n\nFramewise displacement > .75mm\nArtifact prediction from the auto-motion-fmriprep classifie (Cosme, Flournoy, and DeStasio 2018)\n\n\n\n2.4.3 Noramalization template\nWe normalized (i.e., registered) scans to\n\nPediatric template\nAdult template\n\n\n\n2.4.4 Smoothing Kernel\nWe smoothed by\n\n6mm\n4mm"
+  },
+  {
+    "objectID": "preregistration-example.html#sample-composition",
+    "href": "preregistration-example.html#sample-composition",
+    "title": "Preregistration Example",
+    "section": "2.5 Sample composition",
+    "text": "2.5.1 Motion exclusions\nWe kept particpants who had\n\nAny amount of trash-regressor trials\n>80% non-trash-regressor trials\n>90% non-trash-regressor trials"
+  },
+  {
+    "objectID": "preregistration-example.html#type-e",
+    "href": "preregistration-example.html#type-e",
+    "title": "Preregistration Example",
+    "section": "3.1 Type E",
+    "text": "Normalization template\nSmoothing kernel"
+  },
+  {
+    "objectID": "preregistration-example.html#type-n",
+    "href": "preregistration-example.html#type-n",
+    "title": "Preregistration Example",
+    "section": "3.2 Type N",
+    "text": "Exclusion criteria\n\nAlthough exclusion criteria change the sample size, which changes power and precision, not excluding bad data may negatively impact precision or lead to bias, so we choose to examine these choice options."
+  },
+  {
+    "objectID": "preregistration-example.html#type-u",
+    "href": "preregistration-example.html#type-u",
+    "title": "Preregistration Example",
+    "section": "3.3 Type U",
+    "text": "Parcellation atlas\nMotion (trash) regressors"
+  },
+  {
+    "objectID": "preregistration-example.html#sec-type-u-comps",
+    "href": "preregistration-example.html#sec-type-u-comps",
+    "title": "Preregistration Example",
+    "section": "3.4 Statistical comparison of Type U decisions",
+    "text": "We started out identifying choice of region of interest in the social brain as a potential Type U decision. Does it matter whether we use data from ventro-medial prefrontal cortext (vmPFC) or posterior cingulate cortex (PCC)? Instead of examining several different multiverses for each ROI to examine the robustness of the effect size or significance of our association of interest, we could test this question in a model-based way. We also decided that choice of pubertal measure and self-referential processing contrast could be examined via model comparison (but see Byrne et al. 2019 regarding the measurement structure of puberty).\nTherefore we decided to additionally examine the question: does the association between puberty and self-referential processing vary depending on the ROI and contrast; and which measure of puberty provides the best-fitting model?"
+  },
+  {
+    "objectID": "preregistration-example.html#organizing-the-multiverse",
+    "href": "preregistration-example.html#organizing-the-multiverse",
+    "title": "Preregistration Example",
+    "section": "3.5 Organizing the multiverse",
+    "text": "We will define a number of multiverses using the combination of parcellation atlas (U; 2 options), motion regressor (U, 3 options) and exclusion criteria (N, 3 options), for a total of 18. Within each multiverse, analytic specifications comprise combinations of normalization template (2 options) and smoothing kernel (2 options) for a total of 4."
+  },
+  {
+    "objectID": "shiny-app.html",
+    "href": "shiny-app.html",
+    "title": "Shiny App",
     "section": "",
-    "text": ""
+    "text": "The Shiny App shows results from the preregistration described in the preregistration example, which are a subset of analyses from a larger project.\nPlease select the Longitudinal model comparison –> AIC curve tab.\n\n\n\nshiny app"
+  },
+  {
+    "objectID": "poster.html",
+    "href": "poster.html",
+    "title": "Prereg the Multiverse",
+    "section": "",
+    "text": "This poster is a website"
   }
 ]

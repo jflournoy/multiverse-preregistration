@@ -1,5 +1,146 @@
 ---
 title: "Preregistration Example"
+number-sections: true
+bibliography: multiverse.bib
 ---
+
+
+# Research question (construct-level) {#sec-research-question}
+
+How is pubertal development related to neural activation during self-referential processing? 
+
+(_Note: added after considering certain Type U decisions_) Does the association between puberty and self-referential processing vary depending on the ROI and contrast; and which measure of puberty provides the best-fitting model?
+
+# Decisions
+
+## Covariates (other constucts)
+
+N/A
+
+## Causal model(s)
+
+N/A
+
+## Measurements of constructs 
+
+### Self-referential processing contrast
+
+The task consisted of self-referential processing of
+
+1. prosocial
+2. anti-social
+3. and withdrawn
+
+trait descriptors, contrasted against these same adjectives in a non-social setting.
+
+### fMRI Data
+
+BOLD contrast estimates from a self-evaluation task while undergoing functional neuroimaging [@barendse2020a].
+
+Mean contrast estimates from each participant at each wave were extracted from
+
+1. pgACC
+2. sgACC
+3. vmPFC
+4. PCC
+
+### Pubertal development
+
+1. Pubertal Development Scale
+2. Tanner Stage Line Drawings
+3, Salivary DHEA
+4. Salivary testosterone
+5. Salivary estradiol
+
+## Processing of measurements
+
+### ROI Atlas
+
+We extracted data from ROIs defined from parcels using 
+
+1. HCP atlas
+2. Schaefer 400 atlas
+
+### Motion regressors
+
+We included a motion "trash" regressor in the first-level modeling defined by 
+
+1. Framewise displacement  > .75mm
+2. Artifact prediction from the auto-motion-fmriprep classifie [@cosme2018]
+
+### Noramalization template
+
+We normalized (i.e., registered) scans to 
+
+1. Pediatric template
+2. Adult template
+
+### Smoothing Kernel
+
+We smoothed by
+
+1. 6mm
+2. 4mm
+
+## Sample composition
+
+### Motion exclusions
+
+We kept particpants who had
+
+1. Any amount of trash-regressor trials
+2. &gt;80% non-trash-regressor trials
+3. &gt;90% non-trash-regressor trials
+
+# Decision types
+
+## Type E
+
+1. Normalization template
+2. Smoothing kernel
+
+## Type N
+
+1. Exclusion criteria
+
+Although exclusion criteria change the sample size, which changes power and precision, not excluding bad data may negatively impact precision or lead to bias, so we choose to examine these choice options.
+
+## Type U
+
+1. Parcellation atlas
+2. Motion (trash) regressors
+
+## Statistical comparison of Type U decisions {#sec-type-u-comps}
+
+We started out identifying choice of region of interest in the social brain as a potential Type U decision. Does it matter whether we use data from ventro-medial prefrontal cortext (vmPFC) or posterior cingulate cortex (PCC)? Instead of examining several different multiverses for each ROI to examine the robustness of the effect size or significance of our association of interest, we could test this question in a model-based way. We also decided that choice of pubertal measure and self-referential processing contrast could be examined via model comparison [but see @byrne2019 regarding the measurement structure of puberty]. 
+
+Therefore we decided to additionally examine the question: does the association between puberty and self-referential processing vary depending on the ROI and contrast; and which measure of puberty provides the best-fitting model?
+
+## Organizing the multiverse
+
+We will define a number of multiverses using the combination of parcellation atlas (U; 2 options), motion regressor (U, 3 options) and exclusion criteria (N, 3 options), for a total of 18. Within each multiverse, analytic specifications comprise combinations of normalization template (2 options) and smoothing kernel (2 options) for a total of 4.
+
+# Model definitions
+
+For each measure of puberty we constructed a hierarchical linear model regressing neural activity on the pubertal measure, an indicator for ROI, and an indicator for the adjective-type contrast. We fit four models allowing these variables to interact, or not:
+
+1. `m <- lmer( BOLD ~ puberty + ROI + contrast + (1 | id) )`
+2. `m <- lmer( BOLD ~ puberty * ROI + contrast + (1 | id) )`
+3. `m <- lmer( BOLD ~ puberty * contrast + ROI + (1 | id) )`
+4. `m <- lmer( BOLD ~ puberty * ROI * contrast + (1 | id) )`
+
+Importantly, the BOLD data for each model is identical, though we "stack" data from multiple ROIs and contrasts. Each model is repeated for each puberty measure.
+
+# Criterion of interest {#sec-criterion}
+
+The criterion of interest is, primarily, the AIC difference between best of the the 4 x 5 (pubertal measure) models and the rest. 
+
+# Interpretation and Decision process
+
+AIC differences &lt;10 will be considered equivolcal. Consistency of lowest AIC across analyses will be considered evidence of robustness to specifications. Additionally, we will interpret models with the lowest AIC if they are robust across specifications.
+
+Non-robustness across Type U or Type N decisions will be discussed.
+
+# References
 
 

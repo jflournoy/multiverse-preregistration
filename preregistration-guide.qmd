@@ -8,6 +8,8 @@ Note that developing a specification curve analysis / multiverse analysis (SCA/M
 
 The steps below may not be fully linear! In other words, if you start at the top and work your way down, you may find yourself revisiting previous steps. This is okay and good.
 
+Also note that, for brevity, this guide does not outline the description of the sample, data collection, instruments, etc.
+
 # Research question (construct-level) {#sec-research-question}
 
 This is where you can specify your research question, e.g., “What is the association between screen-time and adolescent mental health?”

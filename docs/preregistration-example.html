@@ -11,6 +11,25 @@
     div.column{display: inline-block; vertical-align: top; width: 50%;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+    }
+    .hanging div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }
   </style>
 
   <!--[if lt IE 9]>
@@ -65,7 +84,7 @@
     <a class="nav-link active" href="./preregistration-example.html" aria-current="page">Preregistration Example</a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://dcosme.shinyapps.io/explore-sca/">Shiny App</a>
+    <a class="nav-link" href="./shiny-app.html">Shiny App</a>
   </li>  
 </ul>
           <div id="quarto-search" class="mb-0 " title="Search">
@@ -77,14 +96,217 @@
  <!-- /navbar/sidebar -->
 <div class="container-fluid quarto-container d-flex flex-column page-layout-article" id="quarto-content">
 <div class="row flex-fill">
-  <div id="quarto-toc-sidebar" class=" pt-0 col col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-toc order-last"></div>
+  <div id="quarto-toc-sidebar" class=" pt-0 col col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-toc order-last"><nav id="TOC" role="doc-toc">
+<h2 id="toc-title">On this page</h2>
+<ul>
+<li><a href="#sec-research-question" class="nav-link active" data-scroll-target="#sec-research-question"> <span class="header-section-number">1</span> Research question (construct-level)</a></li>
+<li><a href="#decisions" class="nav-link" data-scroll-target="#decisions"> <span class="header-section-number">2</span> Decisions</a>
+<ul class="collapse">
+<li><a href="#covariates-other-constucts" class="nav-link" data-scroll-target="#covariates-other-constucts"> <span class="header-section-number">2.1</span> Covariates (other constucts)</a></li>
+<li><a href="#causal-models" class="nav-link" data-scroll-target="#causal-models"> <span class="header-section-number">2.2</span> Causal model(s)</a></li>
+<li><a href="#measurements-of-constructs" class="nav-link" data-scroll-target="#measurements-of-constructs"> <span class="header-section-number">2.3</span> Measurements of constructs</a>
+<ul class="collapse">
+<li><a href="#self-referential-processing-contrast" class="nav-link" data-scroll-target="#self-referential-processing-contrast"> <span class="header-section-number">2.3.1</span> Self-referential processing contrast</a></li>
+<li><a href="#fmri-data" class="nav-link" data-scroll-target="#fmri-data"> <span class="header-section-number">2.3.2</span> fMRI Data</a></li>
+<li><a href="#pubertal-development" class="nav-link" data-scroll-target="#pubertal-development"> <span class="header-section-number">2.3.3</span> Pubertal development</a></li>
+</ul></li>
+<li><a href="#processing-of-measurements" class="nav-link" data-scroll-target="#processing-of-measurements"> <span class="header-section-number">2.4</span> Processing of measurements</a>
+<ul class="collapse">
+<li><a href="#roi-atlas" class="nav-link" data-scroll-target="#roi-atlas"> <span class="header-section-number">2.4.1</span> ROI Atlas</a></li>
+<li><a href="#motion-regressors" class="nav-link" data-scroll-target="#motion-regressors"> <span class="header-section-number">2.4.2</span> Motion regressors</a></li>
+<li><a href="#noramalization-template" class="nav-link" data-scroll-target="#noramalization-template"> <span class="header-section-number">2.4.3</span> Noramalization template</a></li>
+<li><a href="#smoothing-kernel" class="nav-link" data-scroll-target="#smoothing-kernel"> <span class="header-section-number">2.4.4</span> Smoothing Kernel</a></li>
+</ul></li>
+<li><a href="#sample-composition" class="nav-link" data-scroll-target="#sample-composition"> <span class="header-section-number">2.5</span> Sample composition</a>
+<ul class="collapse">
+<li><a href="#motion-exclusions" class="nav-link" data-scroll-target="#motion-exclusions"> <span class="header-section-number">2.5.1</span> Motion exclusions</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#decision-types" class="nav-link" data-scroll-target="#decision-types"> <span class="header-section-number">3</span> Decision types</a>
+<ul class="collapse">
+<li><a href="#type-e" class="nav-link" data-scroll-target="#type-e"> <span class="header-section-number">3.1</span> Type E</a></li>
+<li><a href="#type-n" class="nav-link" data-scroll-target="#type-n"> <span class="header-section-number">3.2</span> Type N</a></li>
+<li><a href="#type-u" class="nav-link" data-scroll-target="#type-u"> <span class="header-section-number">3.3</span> Type U</a></li>
+<li><a href="#sec-type-u-comps" class="nav-link" data-scroll-target="#sec-type-u-comps"> <span class="header-section-number">3.4</span> Statistical comparison of Type U decisions</a></li>
+<li><a href="#organizing-the-multiverse" class="nav-link" data-scroll-target="#organizing-the-multiverse"> <span class="header-section-number">3.5</span> Organizing the multiverse</a></li>
+</ul></li>
+<li><a href="#model-definitions" class="nav-link" data-scroll-target="#model-definitions"> <span class="header-section-number">4</span> Model definitions</a></li>
+<li><a href="#sec-criterion" class="nav-link" data-scroll-target="#sec-criterion"> <span class="header-section-number">5</span> Criterion of interest</a></li>
+<li><a href="#interpretation-and-decision-process" class="nav-link" data-scroll-target="#interpretation-and-decision-process"> <span class="header-section-number">6</span> Interpretation and Decision process</a></li>
+<li><a href="#references" class="nav-link" data-scroll-target="#references"> <span class="header-section-number">7</span> References</a></li>
+</ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/jflournoy/multiverse-preregistration/issues/new" class="toc-action">Report an issue</a></p></div></div></nav></div>
   <div class="col mx-auto col-sm-12 col-md-9 col-lg-8 col-xl-7 px-lg-4 pe-xxl-4 ps-xxl-0">
 <main>
 <header id="title-block-header">
 <h1 class="title display-7">Preregistration Example</h1>
 </header>
 
+<section id="sec-research-question" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Research question (construct-level)</h1>
+<p>How is pubertal development related to neural activation during self-referential processing?</p>
+<p>(<em>Note: added after considering certain Type U decisions</em>) Does the association between puberty and self-referential processing vary depending on the ROI and contrast; and which measure of puberty provides the best-fitting model?</p>
+</section>
+<section id="decisions" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Decisions</h1>
+<section id="covariates-other-constucts" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="covariates-other-constucts"><span class="header-section-number">2.1</span> Covariates (other constucts)</h2>
+<p>N/A</p>
+</section>
+<section id="causal-models" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="causal-models"><span class="header-section-number">2.2</span> Causal model(s)</h2>
+<p>N/A</p>
+</section>
+<section id="measurements-of-constructs" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="measurements-of-constructs"><span class="header-section-number">2.3</span> Measurements of constructs</h2>
+<section id="self-referential-processing-contrast" class="level3" data-number="2.3.1">
+<h3 data-number="2.3.1" class="anchored" data-anchor-id="self-referential-processing-contrast"><span class="header-section-number">2.3.1</span> Self-referential processing contrast</h3>
+<p>The task consisted of self-referential processing of</p>
+<ol type="1">
+<li>prosocial</li>
+<li>anti-social</li>
+<li>and withdrawn</li>
+</ol>
+<p>trait descriptors, contrasted against these same adjectives in a non-social setting.</p>
+</section>
+<section id="fmri-data" class="level3" data-number="2.3.2">
+<h3 data-number="2.3.2" class="anchored" data-anchor-id="fmri-data"><span class="header-section-number">2.3.2</span> fMRI Data</h3>
+<p>BOLD contrast estimates from a self-evaluation task while undergoing functional neuroimaging <span class="citation" data-cites="barendse2020a">(<a href="#ref-barendse2020a" role="doc-biblioref">Barendse et al. 2020</a>)</span>.</p>
+<p>Mean contrast estimates from each participant at each wave were extracted from</p>
+<ol type="1">
+<li>pgACC</li>
+<li>sgACC</li>
+<li>vmPFC</li>
+<li>PCC</li>
+</ol>
+</section>
+<section id="pubertal-development" class="level3" data-number="2.3.3">
+<h3 data-number="2.3.3" class="anchored" data-anchor-id="pubertal-development"><span class="header-section-number">2.3.3</span> Pubertal development</h3>
+<ol type="1">
+<li>Pubertal Development Scale</li>
+<li>Tanner Stage Line Drawings 3, Salivary DHEA</li>
+<li>Salivary testosterone</li>
+<li>Salivary estradiol</li>
+</ol>
+</section>
+</section>
+<section id="processing-of-measurements" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="processing-of-measurements"><span class="header-section-number">2.4</span> Processing of measurements</h2>
+<section id="roi-atlas" class="level3" data-number="2.4.1">
+<h3 data-number="2.4.1" class="anchored" data-anchor-id="roi-atlas"><span class="header-section-number">2.4.1</span> ROI Atlas</h3>
+<p>We extracted data from ROIs defined from parcels using</p>
+<ol type="1">
+<li>HCP atlas</li>
+<li>Schaefer 400 atlas</li>
+</ol>
+</section>
+<section id="motion-regressors" class="level3" data-number="2.4.2">
+<h3 data-number="2.4.2" class="anchored" data-anchor-id="motion-regressors"><span class="header-section-number">2.4.2</span> Motion regressors</h3>
+<p>We included a motion “trash” regressor in the first-level modeling defined by</p>
+<ol type="1">
+<li>Framewise displacement &gt; .75mm</li>
+<li>Artifact prediction from the auto-motion-fmriprep classifie <span class="citation" data-cites="cosme2018">(<a href="#ref-cosme2018" role="doc-biblioref">Cosme, Flournoy, and DeStasio 2018</a>)</span></li>
+</ol>
+</section>
+<section id="noramalization-template" class="level3" data-number="2.4.3">
+<h3 data-number="2.4.3" class="anchored" data-anchor-id="noramalization-template"><span class="header-section-number">2.4.3</span> Noramalization template</h3>
+<p>We normalized (i.e., registered) scans to</p>
+<ol type="1">
+<li>Pediatric template</li>
+<li>Adult template</li>
+</ol>
+</section>
+<section id="smoothing-kernel" class="level3" data-number="2.4.4">
+<h3 data-number="2.4.4" class="anchored" data-anchor-id="smoothing-kernel"><span class="header-section-number">2.4.4</span> Smoothing Kernel</h3>
+<p>We smoothed by</p>
+<ol type="1">
+<li>6mm</li>
+<li>4mm</li>
+</ol>
+</section>
+</section>
+<section id="sample-composition" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="sample-composition"><span class="header-section-number">2.5</span> Sample composition</h2>
+<section id="motion-exclusions" class="level3" data-number="2.5.1">
+<h3 data-number="2.5.1" class="anchored" data-anchor-id="motion-exclusions"><span class="header-section-number">2.5.1</span> Motion exclusions</h3>
+<p>We kept particpants who had</p>
+<ol type="1">
+<li>Any amount of trash-regressor trials</li>
+<li>&gt;80% non-trash-regressor trials</li>
+<li>&gt;90% non-trash-regressor trials</li>
+</ol>
+</section>
+</section>
+</section>
+<section id="decision-types" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Decision types</h1>
+<section id="type-e" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="type-e"><span class="header-section-number">3.1</span> Type E</h2>
+<ol type="1">
+<li>Normalization template</li>
+<li>Smoothing kernel</li>
+</ol>
+</section>
+<section id="type-n" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="type-n"><span class="header-section-number">3.2</span> Type N</h2>
+<ol type="1">
+<li>Exclusion criteria</li>
+</ol>
+<p>Although exclusion criteria change the sample size, which changes power and precision, not excluding bad data may negatively impact precision or lead to bias, so we choose to examine these choice options.</p>
+</section>
+<section id="type-u" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="type-u"><span class="header-section-number">3.3</span> Type U</h2>
+<ol type="1">
+<li>Parcellation atlas</li>
+<li>Motion (trash) regressors</li>
+</ol>
+</section>
+<section id="sec-type-u-comps" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="sec-type-u-comps"><span class="header-section-number">3.4</span> Statistical comparison of Type U decisions</h2>
+<p>We started out identifying choice of region of interest in the social brain as a potential Type U decision. Does it matter whether we use data from ventro-medial prefrontal cortext (vmPFC) or posterior cingulate cortex (PCC)? Instead of examining several different multiverses for each ROI to examine the robustness of the effect size or significance of our association of interest, we could test this question in a model-based way. We also decided that choice of pubertal measure and self-referential processing contrast could be examined via model comparison <span class="citation" data-cites="byrne2019">(but see <a href="#ref-byrne2019" role="doc-biblioref">Byrne et al. 2019</a> regarding the measurement structure of puberty)</span>.</p>
+<p>Therefore we decided to additionally examine the question: does the association between puberty and self-referential processing vary depending on the ROI and contrast; and which measure of puberty provides the best-fitting model?</p>
+</section>
+<section id="organizing-the-multiverse" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="organizing-the-multiverse"><span class="header-section-number">3.5</span> Organizing the multiverse</h2>
+<p>We will define a number of multiverses using the combination of parcellation atlas (U; 2 options), motion regressor (U, 3 options) and exclusion criteria (N, 3 options), for a total of 18. Within each multiverse, analytic specifications comprise combinations of normalization template (2 options) and smoothing kernel (2 options) for a total of 4.</p>
+</section>
+</section>
+<section id="model-definitions" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Model definitions</h1>
+<p>For each measure of puberty we constructed a hierarchical linear model regressing neural activity on the pubertal measure, an indicator for ROI, and an indicator for the adjective-type contrast. We fit four models allowing these variables to interact, or not:</p>
+<ol type="1">
+<li><code>m &lt;- lmer( BOLD ~ puberty + ROI + contrast + (1 | id) )</code></li>
+<li><code>m &lt;- lmer( BOLD ~ puberty * ROI + contrast + (1 | id) )</code></li>
+<li><code>m &lt;- lmer( BOLD ~ puberty * contrast + ROI + (1 | id) )</code></li>
+<li><code>m &lt;- lmer( BOLD ~ puberty * ROI * contrast + (1 | id) )</code></li>
+</ol>
+<p>Importantly, the BOLD data for each model is identical, though we “stack” data from multiple ROIs and contrasts. Each model is repeated for each puberty measure.</p>
+</section>
+<section id="sec-criterion" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Criterion of interest</h1>
+<p>The criterion of interest is, primarily, the AIC difference between best of the the 4 x 5 (pubertal measure) models and the rest.</p>
+</section>
+<section id="interpretation-and-decision-process" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> Interpretation and Decision process</h1>
+<p>AIC differences &lt;10 will be considered equivolcal. Consistency of lowest AIC across analyses will be considered evidence of robustness to specifications. Additionally, we will interpret models with the lowest AIC if they are robust across specifications.</p>
+<p>Non-robustness across Type U or Type N decisions will be discussed.</p>
+</section>
+<section id="references" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> References</h1>
 
+
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-barendse2020a" class="csl-entry" role="doc-biblioentry">
+Barendse, Marjolein E. A., Danielle Cosme, John C. Flournoy, Nandita Vijayakumar, Theresa W. Cheng, Nicholas B. Allen, and Jennifer H. Pfeifer. 2020. <span>“Neural Correlates of Self-Evaluation in Relation to Age and Pubertal Development in Early Adolescent Girls.”</span> <em>Developmental Cognitive Neuroscience</em> 44 (August): 100799. <a href="https://doi.org/10.1016/j.dcn.2020.100799">https://doi.org/10.1016/j.dcn.2020.100799</a>.
+</div>
+<div id="ref-byrne2019" class="csl-entry" role="doc-biblioentry">
+Byrne, Michelle L., Samantha Chavez, Nandita Vijayakumar, Theresa W. Cheng, John Flournoy, Marjolein Barendse, Elizabeth A. Shirtcliff, Nick Allen, and Jennifer Pfeifer. 2019. <span>“Multi-Method Confirmatory Factor Analyses of Puberty in Early Adolescent Girls.”</span> <span>PsyArXiv</span>. <a href="https://doi.org/10.31234/osf.io/pue6f">https://doi.org/10.31234/osf.io/pue6f</a>.
+</div>
+<div id="ref-cosme2018" class="csl-entry" role="doc-biblioentry">
+Cosme, Dani, John C. Flournoy, and Krista DeStasio. 2018. <span>“Dsnlab/Auto-Motion: <span>In</span> House.”</span> Zenodo. <a href="https://doi.org/10.5281/zenodo.1240528">https://doi.org/10.5281/zenodo.1240528</a>.
+</div>
+</div>
+</section>
 <script type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const icon = "";

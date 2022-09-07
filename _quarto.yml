@@ -11,10 +11,9 @@ site:
         text: Home
       - preregistration-guide.qmd
       - preregistration-example.qmd
-      - href: https://dcosme.shinyapps.io/explore-sca/
-        text: Shiny App
+      - shiny-app.qmd
   repo-url: https://github.com/jflournoy/multiverse-preregistration
-  repo-actions: [edit, issue]
+  repo-actions: issue
 
 format:
   html:

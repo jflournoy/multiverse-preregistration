@@ -1,0 +1,13 @@
+---
+title: "Navigating the Multiverse in Longitudal Neuroscience"
+format: pdf
+author:
+  - Marjolein Barendse
+  - Michelle Byrne
+  - Danielle Cosme
+  - John Flournoy*
+  - Jennifer Pfeifer
+---
+
+This poster is a [website](http://johnflournoy.science/multiverse-preregistration/)
+
