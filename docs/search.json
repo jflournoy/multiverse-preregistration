@@ -137,13 +137,6 @@
     "href": "shiny-app.html",
     "title": "Shiny App",
     "section": "",
-    "text": "The Shiny App shows results from the preregistration described in the preregistration example, which are a subset of analyses from a larger project.\nPlease select the Longitudinal model comparison –> AIC curve tab.\n\n\n\nshiny app"
-  },
-  {
-    "objectID": "poster.html",
-    "href": "poster.html",
-    "title": "Prereg the Multiverse",
-    "section": "",
-    "text": "This poster is a website"
+    "text": "The Shiny App shows results from the preregistration described in the preregistration example, which are a subset of analyses from a larger project.\nPlease select the Longitudinal model comparison –> AIC curve tab.\n\n\n\nPlease select the Longitudinal model comparison –> AIC curve tab."
   }
 ]
