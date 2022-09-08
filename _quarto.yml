@@ -1,5 +1,9 @@
 project:
   type: site
+  render:
+    - "*.qmd"
+    - "!poster.qmd"
+
 
 site:
   title: "Prereg the Multiverse"

@@ -7,62 +7,6 @@
     "text": "Presenting author: Dr. John Flournoy\nCo-authors (alphabetical): Dr. Marjolein Barendse, Dr. Michelle Byrne, Dr. Danielle Cosme, Dr. Jennifer Pfeifer\nThis website provides a template and example preregistration for a multiverse analysis. Within the template is a helpful guide for planning your analyses. The example is from a larger paper in progress using real developmental cognitive neuroimaging data. Finally, we provide a shiny app to showcase some of the results from this example."
   },
   {
-    "objectID": "preregistration-guide.html#covariates-other-constucts",
-    "href": "preregistration-guide.html#covariates-other-constucts",
-    "title": "Preregistration guide",
-    "section": "2.1 Covariates (other constucts)",
-    "text": "What are other constructs that are involved in, or somehow affect, the associations of interest?\n\nThese could be mediators, moderators, confounds, or constructs that impact the effects, even if they don’t impact the causes\nThese other constructs may be from competing causal models—we’ll tackle this below.\n\nList these…"
-  },
-  {
-    "objectID": "preregistration-guide.html#causal-models",
-    "href": "preregistration-guide.html#causal-models",
-    "title": "Preregistration guide",
-    "section": "2.2 Causal model(s)",
-    "text": "The variables you’ve listed above may play different roles in different causal models.\n\nWhat is the causal flow between the causes and the effects? (Cinelli, Forney, and Pearl 2020)\nAre there mediators involved, i.e., does the cause impact the effect in part via its effect on an intermediate construct?\nAre there confounders involved? Is there a construct that causes both the cause and effect of interest?\nAre there moderators of the cause’s impact on the effect, i.e., are there constructs that change how much the cause impacts the effect?\nIf you (and theory, and the literature) are uncertain about what role a construct plays, it is likely there are competing causal models.\nWrite out all reasonable, plausible, causal models. It may be helpful to create a diagram in a graphical program (InkScape, LucidChart, PowerPoint, Adobe Illustrator) or using the ggdag package in R."
-  },
-  {
-    "objectID": "preregistration-guide.html#measurements-of-constructs",
-    "href": "preregistration-guide.html#measurements-of-constructs",
-    "title": "Preregistration guide",
-    "section": "2.3 Measurements of constructs",
-    "text": "Are the constructs identified above measured in your data set? If you’re designing a new study, how will these constructs be measured?\nAre there multiple measurement instruments a reasonable researcher could use? Have you already collected measurements of constructs using multiple different instruments?\nList these…"
-  },
-  {
-    "objectID": "preregistration-guide.html#processing-of-measurements",
-    "href": "preregistration-guide.html#processing-of-measurements",
-    "title": "Preregistration guide",
-    "section": "2.4 Processing of measurements",
-    "text": "Is it possible to score your instruments in meaningfully different ways?\nIs it possible to derive different metrics of the same construct from your behavioral data?\nAre there different preprocessing steps that people could apply to behavioral data?\nList these…"
-  },
-  {
-    "objectID": "preregistration-guide.html#sample-composition",
-    "href": "preregistration-guide.html#sample-composition",
-    "title": "Preregistration guide",
-    "section": "2.5 Sample composition",
-    "text": "Are there different ways to construct the sample?\n\nInclusion and exclusion criteria?\nData quality cutoffs?\nList these…"
-  },
-  {
-    "objectID": "preregistration-guide.html#other-decisions",
-    "href": "preregistration-guide.html#other-decisions",
-    "title": "Preregistration guide",
-    "section": "2.6 Other decisions",
-    "text": "It’s possible the above set of headings is not exaustive. Include other decisions as well."
-  },
-  {
-    "objectID": "preregistration-guide.html#sec-type-u-comps",
-    "href": "preregistration-guide.html#sec-type-u-comps",
-    "title": "Preregistration guide",
-    "section": "3.1 Statistical comparison of Type U decisions",
-    "text": "Some decision points invite comparisons between competing options that may be evaluated using existing statistical tools. In our preregistration example, we were interested in how pubertal development relates to neural activation during self-referential processing in the “social brain”. We started out identifying choice of region of interest in the social brain as a potential Type U decision. Does it matter whether we use data from ventro-medial prefrontal cortext (vmPFC) or posterior cingulate cortex (PCC)? Instead of examining several different multiverses for each ROI to examine the robustness of the effect size or significance of our association of interest, we could test this question in a model-based way. This becomes an overarching research question upon which our primary question depends, and we can examine the robustness of the answer to this question across our multiverse of decisions.\n\nIs it possible to adjudicate between options in some Type U decisions using model comparison or other common statistical tools?\nList these Type U decisions.\nConsider amending sec. 1 in light of this new information."
-  },
-  {
-    "objectID": "preregistration-guide.html#organizing-the-multiverse",
-    "href": "preregistration-guide.html#organizing-the-multiverse",
-    "title": "Preregistration guide",
-    "section": "3.2 Organizing the multiverse",
-    "text": "Using the above categories, Giudice and Gangestad (2021) suggest the following approach:\n\nType N: only the best option from non-equivalent decisions should be kept, in which case these decisions will not expand the set of analyses in the multiverse. In cases where the best option is not known (e.g., the correct causal model), it might make sense to examine the criterion (see below) for each option across separate multiverse analyses.\n\nType U: each option should be used to generate a separate multiverse.\nType E: the different possible combinations of options for these decisions will create the set of analayses for each multiverse.\n\nUsing the above organizational strategy, describe, your mutliverse. To get a sense of the size of the set of the analyses in the multiverse, multiply the number of options for each decision together. If there are two Type E decisions each with three options, and one Type U decision, with two options, we would have two separate multiverses, each with \\(3\\times 3 = 9\\) observations of the criterion.\nIt can be helpful to describe using language like\n\nWe will define a number of multiverses using the combination of Type U Factor I (3 options) and Type N Factor J (5 options), for a total of 10. Within each multiverse, analytic specifications comprise combinations of Type E Factor K (3 options), Factor L (2 options), and Factor Q (6 options) for a total of 36."
-  },
-  {
     "objectID": "preregistration-example.html#covariates-other-constucts",
     "href": "preregistration-example.html#covariates-other-constucts",
     "title": "Preregistration Example",
@@ -130,7 +74,63 @@
     "href": "preregistration-example.html#organizing-the-multiverse",
     "title": "Preregistration Example",
     "section": "3.5 Organizing the multiverse",
-    "text": "We will define a number of multiverses using the combination of parcellation atlas (U; 2 options), motion regressor (U, 3 options) and exclusion criteria (N, 3 options), for a total of 18. Within each multiverse, analytic specifications comprise combinations of normalization template (2 options) and smoothing kernel (2 options) for a total of 4."
+    "text": "We will define a number of multiverses using the combination of parcellation atlas (U; 2 options), motion regressor (U, 3 options) and exclusion criteria (N, 3 options), for a total of 18 (fig. 1). Within each multiverse, analytic specifications comprise combinations of normalization template (2 options) and smoothing kernel (2 options) for a total of 4 (fig. 2).\n\n\n\n\n\nFigure 1: Possible decision paths through Type U and Type N decisions\n\n\n\n\n\n\n\n\n\nFigure 2: Possible decision paths through Type E decisions"
+  },
+  {
+    "objectID": "preregistration-guide.html#covariates-other-constucts",
+    "href": "preregistration-guide.html#covariates-other-constucts",
+    "title": "Preregistration guide",
+    "section": "2.1 Covariates (other constucts)",
+    "text": "What are other constructs that are involved in, or somehow affect, the associations of interest?\n\nThese could be mediators, moderators, confounds, or constructs that impact the effects, even if they don’t impact the causes\nThese other constructs may be from competing causal models—we’ll tackle this below.\n\nList these…"
+  },
+  {
+    "objectID": "preregistration-guide.html#causal-models",
+    "href": "preregistration-guide.html#causal-models",
+    "title": "Preregistration guide",
+    "section": "2.2 Causal model(s)",
+    "text": "The variables you’ve listed above may play different roles in different causal models.\n\nWhat is the causal flow between the causes and the effects? (Cinelli, Forney, and Pearl 2020)\nAre there mediators involved, i.e., does the cause impact the effect in part via its effect on an intermediate construct?\nAre there confounders involved? Is there a construct that causes both the cause and effect of interest?\nAre there moderators of the cause’s impact on the effect, i.e., are there constructs that change how much the cause impacts the effect?\nIf you (and theory, and the literature) are uncertain about what role a construct plays, it is likely there are competing causal models.\nWrite out all reasonable, plausible, causal models. It may be helpful to create a diagram in a graphical program (InkScape, LucidChart, PowerPoint, Adobe Illustrator) or using the ggdag package in R."
+  },
+  {
+    "objectID": "preregistration-guide.html#measurements-of-constructs",
+    "href": "preregistration-guide.html#measurements-of-constructs",
+    "title": "Preregistration guide",
+    "section": "2.3 Measurements of constructs",
+    "text": "Are the constructs identified above measured in your data set? If you’re designing a new study, how will these constructs be measured?\nAre there multiple measurement instruments a reasonable researcher could use? Have you already collected measurements of constructs using multiple different instruments?\nList these…"
+  },
+  {
+    "objectID": "preregistration-guide.html#processing-of-measurements",
+    "href": "preregistration-guide.html#processing-of-measurements",
+    "title": "Preregistration guide",
+    "section": "2.4 Processing of measurements",
+    "text": "Is it possible to score your instruments in meaningfully different ways?\nIs it possible to derive different metrics of the same construct from your behavioral data?\nAre there different preprocessing steps that people could apply to behavioral data?\nList these…"
+  },
+  {
+    "objectID": "preregistration-guide.html#sample-composition",
+    "href": "preregistration-guide.html#sample-composition",
+    "title": "Preregistration guide",
+    "section": "2.5 Sample composition",
+    "text": "Are there different ways to construct the sample?\n\nInclusion and exclusion criteria?\nData quality cutoffs?\nList these…"
+  },
+  {
+    "objectID": "preregistration-guide.html#other-decisions",
+    "href": "preregistration-guide.html#other-decisions",
+    "title": "Preregistration guide",
+    "section": "2.6 Other decisions",
+    "text": "It’s possible the above set of headings is not exaustive. Include other decisions as well."
+  },
+  {
+    "objectID": "preregistration-guide.html#sec-type-u-comps",
+    "href": "preregistration-guide.html#sec-type-u-comps",
+    "title": "Preregistration guide",
+    "section": "3.1 Statistical comparison of Type U decisions",
+    "text": "Some decision points invite comparisons between competing options that may be evaluated using existing statistical tools. In our preregistration example, we were interested in how pubertal development relates to neural activation during self-referential processing in the “social brain”. We started out identifying choice of region of interest in the social brain as a potential Type U decision. Does it matter whether we use data from ventro-medial prefrontal cortext (vmPFC) or posterior cingulate cortex (PCC)? Instead of examining several different multiverses for each ROI to examine the robustness of the effect size or significance of our association of interest, we could test this question in a model-based way. This becomes an overarching research question upon which our primary question depends, and we can examine the robustness of the answer to this question across our multiverse of decisions.\n\nIs it possible to adjudicate between options in some Type U decisions using model comparison or other common statistical tools?\nList these Type U decisions.\nConsider amending sec. 1 in light of this new information."
+  },
+  {
+    "objectID": "preregistration-guide.html#organizing-the-multiverse",
+    "href": "preregistration-guide.html#organizing-the-multiverse",
+    "title": "Preregistration guide",
+    "section": "3.2 Organizing the multiverse",
+    "text": "Using the above categories, Giudice and Gangestad (2021) suggest the following approach:\n\nType N: only the best option from non-equivalent decisions should be kept, in which case these decisions will not expand the set of analyses in the multiverse. In cases where the best option is not known (e.g., the correct causal model), it might make sense to examine the criterion (see below) for each option across separate multiverse analyses.\n\nType U: each option should be used to generate a separate multiverse.\nType E: the different possible combinations of options for these decisions will create the set of analayses for each multiverse.\n\nUsing the above organizational strategy, describe, your mutliverse. To get a sense of the size of the set of the analyses in the multiverse, multiply the number of options for each decision together. If there are two Type E decisions each with three options, and one Type U decision, with two options, we would have two separate multiverses, each with \\(3\\times 3 = 9\\) observations of the criterion.\nIt can be helpful to describe using language like\n\nWe will define a number of multiverses using the combination of Type U Factor I (3 options) and Type N Factor J (5 options), for a total of 10. Within each multiverse, analytic specifications comprise combinations of Type E Factor K (3 options), Factor L (2 options), and Factor Q (6 options) for a total of 36."
   },
   {
     "objectID": "shiny-app.html",

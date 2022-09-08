@@ -128,12 +128,12 @@
 <li><a href="#type-n" class="nav-link" data-scroll-target="#type-n"> <span class="header-section-number">3.2</span> Type N</a></li>
 <li><a href="#type-u" class="nav-link" data-scroll-target="#type-u"> <span class="header-section-number">3.3</span> Type U</a></li>
 <li><a href="#sec-type-u-comps" class="nav-link" data-scroll-target="#sec-type-u-comps"> <span class="header-section-number">3.4</span> Statistical comparison of Type U decisions</a></li>
-<li><a href="#organizing-the-multiverse" class="nav-link" data-scroll-target="#organizing-the-multiverse"> <span class="header-section-number">3.5</span> Organizing the multiverse</a></li>
 </ul></li>
-<li><a href="#model-definitions" class="nav-link" data-scroll-target="#model-definitions"> <span class="header-section-number">4</span> Model definitions</a></li>
-<li><a href="#sec-criterion" class="nav-link" data-scroll-target="#sec-criterion"> <span class="header-section-number">5</span> Criterion of interest</a></li>
-<li><a href="#interpretation-and-decision-process" class="nav-link" data-scroll-target="#interpretation-and-decision-process"> <span class="header-section-number">6</span> Interpretation and Decision process</a></li>
-<li><a href="#references" class="nav-link" data-scroll-target="#references"> <span class="header-section-number">7</span> References</a></li>
+<li><a href="#organizing-the-multiverse" class="nav-link" data-scroll-target="#organizing-the-multiverse"> <span class="header-section-number">4</span> Organizing the multiverse</a></li>
+<li><a href="#model-definitions" class="nav-link" data-scroll-target="#model-definitions"> <span class="header-section-number">5</span> Model definitions</a></li>
+<li><a href="#sec-criterion" class="nav-link" data-scroll-target="#sec-criterion"> <span class="header-section-number">6</span> Criterion of interest</a></li>
+<li><a href="#interpretation-and-decision-process" class="nav-link" data-scroll-target="#interpretation-and-decision-process"> <span class="header-section-number">7</span> Interpretation and Decision process</a></li>
+<li><a href="#references" class="nav-link" data-scroll-target="#references"> <span class="header-section-number">8</span> References</a></li>
 </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/jflournoy/multiverse-preregistration/issues/new" class="toc-action">Report an issue</a></p></div></div></nav></div>
   <div class="col mx-auto col-sm-12 col-md-9 col-lg-8 col-xl-7 px-lg-4 pe-xxl-4 ps-xxl-0">
@@ -266,13 +266,33 @@
 <p>We started out identifying choice of region of interest in the social brain as a potential Type U decision. Does it matter whether we use data from ventro-medial prefrontal cortext (vmPFC) or posterior cingulate cortex (PCC)? Instead of examining several different multiverses for each ROI to examine the robustness of the effect size or significance of our association of interest, we could test this question in a model-based way. We also decided that choice of pubertal measure and self-referential processing contrast could be examined via model comparison <span class="citation" data-cites="byrne2019">(but see <a href="#ref-byrne2019" role="doc-biblioref">Byrne et al. 2019</a> regarding the measurement structure of puberty)</span>.</p>
 <p>Therefore we decided to additionally examine the question: does the association between puberty and self-referential processing vary depending on the ROI and contrast; and which measure of puberty provides the best-fitting model?</p>
 </section>
-<section id="organizing-the-multiverse" class="level2" data-number="3.5">
-<h2 data-number="3.5" class="anchored" data-anchor-id="organizing-the-multiverse"><span class="header-section-number">3.5</span> Organizing the multiverse</h2>
-<p>We will define a number of multiverses using the combination of parcellation atlas (U; 2 options), motion regressor (U, 3 options) and exclusion criteria (N, 3 options), for a total of 18. Within each multiverse, analytic specifications comprise combinations of normalization template (2 options) and smoothing kernel (2 options) for a total of 4.</p>
 </section>
+<section id="organizing-the-multiverse" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Organizing the multiverse</h1>
+<p>We will define a number of multiverses using the combination of parcellation atlas (U; 2 options), motion regressor (U, 3 options) and exclusion criteria (N, 3 options), for a total of 18 (<a href="#fig-typeun">fig.&nbsp;1</a>). Within each multiverse, analytic specifications comprise combinations of normalization template (2 options) and smoothing kernel (2 options) for a total of 4 (<a href="#fig-typee">fig.&nbsp;2</a>).</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-typeun" class="quarto-figure quarto-figure-center anchored" width="624">
+<figure class="figure">
+<p><img src="preregistration-example_files/figure-html/fig-typeun-1.png" class="img-fluid figure-img" width="624"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Figure 1: Possible decision paths through Type U and Type N decisions</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-typee" class="quarto-figure quarto-figure-center anchored" width="624">
+<figure class="figure">
+<p><img src="preregistration-example_files/figure-html/fig-typee-1.png" class="img-fluid figure-img" width="624"></p>
+<p></p><figcaption aria-hidden="true" class="figure-caption">Figure 2: Possible decision paths through Type E decisions</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
 </section>
-<section id="model-definitions" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> Model definitions</h1>
+<section id="model-definitions" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Model definitions</h1>
 <p>For each measure of puberty we constructed a hierarchical linear model regressing neural activity on the pubertal measure, an indicator for ROI, and an indicator for the adjective-type contrast. We fit four models allowing these variables to interact, or not:</p>
 <ol type="1">
 <li><code>m &lt;- lmer( BOLD ~ puberty + ROI + contrast + (1 | id) )</code></li>
@@ -282,17 +302,17 @@
 </ol>
 <p>Importantly, the BOLD data for each model is identical, though we “stack” data from multiple ROIs and contrasts. Each model is repeated for each puberty measure.</p>
 </section>
-<section id="sec-criterion" class="level1" data-number="5">
-<h1 data-number="5"><span class="header-section-number">5</span> Criterion of interest</h1>
+<section id="sec-criterion" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> Criterion of interest</h1>
 <p>The criterion of interest is, primarily, the AIC difference between best of the the 4 x 5 (pubertal measure) models and the rest.</p>
 </section>
-<section id="interpretation-and-decision-process" class="level1" data-number="6">
-<h1 data-number="6"><span class="header-section-number">6</span> Interpretation and Decision process</h1>
+<section id="interpretation-and-decision-process" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> Interpretation and Decision process</h1>
 <p>AIC differences &lt;10 will be considered equivolcal. Consistency of lowest AIC across analyses will be considered evidence of robustness to specifications. Additionally, we will interpret models with the lowest AIC if they are robust across specifications.</p>
 <p>Non-robustness across Type U or Type N decisions will be discussed.</p>
 </section>
-<section id="references" class="level1" data-number="7">
-<h1 data-number="7"><span class="header-section-number">7</span> References</h1>
+<section id="references" class="level1" data-number="8">
+<h1 data-number="8"><span class="header-section-number">8</span> References</h1>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
