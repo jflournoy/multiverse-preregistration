@@ -70,13 +70,6 @@
     "text": "We started out identifying choice of region of interest in the social brain as a potential Type U decision. Does it matter whether we use data from ventro-medial prefrontal cortext (vmPFC) or posterior cingulate cortex (PCC)? Instead of examining several different multiverses for each ROI to examine the robustness of the effect size or significance of our association of interest, we could test this question in a model-based way. We also decided that choice of pubertal measure and self-referential processing contrast could be examined via model comparison (but see Byrne et al. 2019 regarding the measurement structure of puberty).\nTherefore we decided to additionally examine the question: does the association between puberty and self-referential processing vary depending on the ROI and contrast; and which measure of puberty provides the best-fitting model?"
   },
   {
-    "objectID": "preregistration-example.html#organizing-the-multiverse",
-    "href": "preregistration-example.html#organizing-the-multiverse",
-    "title": "Preregistration Example",
-    "section": "3.5 Organizing the multiverse",
-    "text": "We will define a number of multiverses using the combination of parcellation atlas (U; 2 options), motion regressor (U, 3 options) and exclusion criteria (N, 3 options), for a total of 18 (fig. 1). Within each multiverse, analytic specifications comprise combinations of normalization template (2 options) and smoothing kernel (2 options) for a total of 4 (fig. 2).\n\n\n\n\n\nFigure 1: Possible decision paths through Type U and Type N decisions\n\n\n\n\n\n\n\n\n\nFigure 2: Possible decision paths through Type E decisions"
-  },
-  {
     "objectID": "preregistration-guide.html#covariates-other-constucts",
     "href": "preregistration-guide.html#covariates-other-constucts",
     "title": "Preregistration guide",

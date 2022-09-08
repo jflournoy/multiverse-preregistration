@@ -213,6 +213,114 @@ ggraph(s_g_paths,
 
 ```
 
+This organizational chunking, with a separate multiverse for each combination of decisions with incompatible options that itself contains multiple speficications that are combinations of decisions with reasonably interchangable options brings conceptual structure that aids interpretation and reduces combinatorial explosion. To get a sense of the complexity, the full picture of all possible analytic paths can be visualized as a single network diagram (@fig-alldec)
+
+
+```{r}
+#| fig-width: 6.5
+#| fig-height: 4
+#| fig-cap: "All possible decision paths"
+#| latout-ncol: 2
+#| fig-subcap:
+#|   - "Colored by analysis"
+#|   - "Colored by multiverse"
+#| label: fig-alldec
+#| warning: false
+#| message: flase
+#| echo: false
+
+library(ggnewscale)
+m0 <- tibble(from = 'Start', to = c('HCP', 'Schaefer'))
+m1 <- tibble(from = rep(c('HCP', 'Schaefer'), each = 2),
+             to = rep(c('Classifier', 'FD'), 2))
+m2 <- tibble(from = rep(c('Classifier', 'FD'), each = 3),
+             to = rep(c('Ex >10%', 'Ex >20%', 'Ex None'), 2))
+s0 <- tibble(from = rep(c('Ex >10%', 'Ex >20%', 'Ex None'), each = 2), to = rep(c('Pediatric', 'Adult'), 3))
+s1 <- tibble(from = rep(c('Pediatric', 'Adult'), each = 2),
+             to = rep(c('6mm', '4mm'), 2))
+ms_edges <- do.call(rbind, list(m0, m1, m2, s0, s1))
+ms_graph <- graph_from_data_frame(ms_edges)
+
+ms_paths <- all_simple_paths(ms_graph, from = 'Start', to = c('6mm', '4mm'))
+
+n_ms_paths <- length(ms_paths)
+ms_path_colors <- viridis::cividis(n_ms_paths)
+
+ms_g <- set_vertex_attr(make_empty_graph(directed = TRUE, n = length(V(ms_graph)$name)),
+                       "name", value = V(ms_graph)$name)
+
+ms_paths_path <- lapply(1:n_ms_paths, function(i){
+  path(ms_paths[[i]], color = ms_path_colors[[i]])
+})
+
+ms_g_paths <- delete_vertices(Reduce(igraph:::`+.igraph`, c(list(ms_g), ms_paths_path)), 'Start')
+
+#V(ms_g_paths)$name
+V(ms_g_paths)$group <- unlist(mapply(rep, c('Multiverse', 'Specification'), each = c(7, 4)))
+
+library(viridis)
+
+ggraph(ms_g_paths,
+       layout = 'igraph', algorithm = 'sugiyama') + 
+  geom_edge_fan(aes(color = as.numeric(as.factor(color)))) +
+  scale_edge_color_viridis(discrete = FALSE, option = 'cividis', alpha = .8,
+                           name = 'Analysis Number') +
+  geom_node_point(size = 10,
+                  aes(color = group)) +
+  scale_color_manual(breaks = c('Multiverse', 'Specification'), values = viridis::mako(2, begin = .5, end = .75),
+                     labels = c('Separate\nmultiverse', 'Specification\nwithin multiverse'), name = '') + 
+  geom_node_text(aes(label = V(ms_g_paths)$name), repel = FALSE, colour = 'black') +
+  theme_void() + 
+  scale_x_continuous(expand = expansion(mult = .1)) + 
+  scale_y_continuous(expand = expansion(mult = .1))
+
+
+library(ggnewscale)
+m0 <- tibble(from = 'Start', to = c('HCP', 'Schaefer'))
+m1 <- tibble(from = rep(c('HCP', 'Schaefer'), each = 2),
+             to = rep(c('Classifier', 'FD'), 2))
+m2 <- tibble(from = rep(c('Classifier', 'FD'), each = 3),
+             to = rep(c('Ex >10%', 'Ex >20%', 'Ex None'), 2))
+s0 <- tibble(from = rep(c('Ex >10%', 'Ex >20%', 'Ex None'), each = 2), to = rep(c('Pediatric', 'Adult'), 3))
+s1 <- tibble(from = rep(c('Pediatric', 'Adult'), each = 2),
+             to = rep(c('6mm', '4mm'), 2))
+ms_edges <- do.call(rbind, list(m0, m1, m2, s0, s1))
+ms_graph <- graph_from_data_frame(ms_edges)
+
+ms_paths <- all_simple_paths(ms_graph, from = 'Start', to = c('6mm', '4mm'))
+
+n_ms_paths <- length(ms_paths)
+ms_path_colors <- viridis::cividis(n_ms_paths)
+
+ms_g <- set_vertex_attr(make_empty_graph(directed = TRUE, n = length(V(ms_graph)$name)),
+                       "name", value = V(ms_graph)$name)
+
+ms_paths_path <- lapply(1:n_ms_paths, function(i){
+  path(ms_paths[[i]], group = ((i-1) %/% 4 + 1))
+})
+
+ms_g_paths <- delete_vertices(Reduce(igraph:::`+.igraph`, c(list(ms_g), ms_paths_path)), 'Start')
+
+#V(ms_g_paths)$name
+V(ms_g_paths)$group <- unlist(mapply(rep, c('Multiverse', 'Specification'), each = c(7, 4)))
+
+library(viridis)
+
+ggraph(ms_g_paths,
+       layout = 'igraph', algorithm = 'sugiyama') + 
+  geom_edge_fan(aes(color = as.factor(group))) +
+  scale_edge_color_brewer(type = 'qual', palette = 'Paired', guide = 'none') + 
+  geom_node_point(size = 10,
+                  aes(color = group)) +
+  scale_color_manual(breaks = c('Multiverse', 'Specification'), values = viridis::mako(2, begin = .5, end = .75),
+                     labels = c('Separate\nmultiverse', 'Specification\nwithin multiverse'), name = '') + 
+  geom_node_text(aes(label = V(ms_g_paths)$name), repel = FALSE, colour = 'black') +
+  theme_void() + 
+  scale_x_continuous(expand = expansion(mult = .1)) + 
+  scale_y_continuous(expand = expansion(mult = .1))
+```
+
+
 # Model definitions
 
 For each measure of puberty we constructed a hierarchical linear model regressing neural activity on the pubertal measure, an indicator for ROI, and an indicator for the adjective-type contrast. We fit four models allowing these variables to interact, or not:
