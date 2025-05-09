@@ -18,6 +18,11 @@ site:
       - shiny-app.qmd
   repo-url: https://github.com/jflournoy/multiverse-preregistration
   repo-actions: issue
+  page-footer: 
+    background: none
+    left: |
+          <!-- 100% privacy-first analytics -->
+          <script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
 
 format:
   html:

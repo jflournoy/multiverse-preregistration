@@ -126,7 +126,7 @@ We will define a number of multiverses using the combination of parcellation atl
 #| fig-cap: "Possible decision paths through Type U and Type N decisions"
 #| label: fig-typeun
 #| warning: false
-#| message: flase
+#| message: false
 #| echo: false
 
 
@@ -174,7 +174,7 @@ ggraph(m_g_paths,
 #| fig-cap: "Possible decision paths through Type E decisions"
 #| label: fig-typee
 #| warning: false
-#| message: flase
+#| message: false
 #| echo: false
 
 
@@ -198,7 +198,7 @@ s_paths_path <- lapply(1:n_s_paths, function(i){
 
 s_g_paths <- delete_vertices(Reduce(igraph:::`+.igraph`, c(list(s_g), s_paths_path)), 'Start')
 
-V(s_g_paths)$group <- unlist(mapply(rep, c('Template', 'Smoothing'), each = c(2, 2)))
+V(s_g_paths)$group <- as.vector(unlist(mapply(rep, c('Template', 'Smoothing'), each = c(2, 2))))
 
 ggraph(s_g_paths,
        layout = 'igraph', algorithm = 'sugiyama') + 
@@ -226,7 +226,7 @@ This organizational chunking, with a separate multiverse for each combination of
 #|   - "Colored by multiverse"
 #| label: fig-alldec
 #| warning: false
-#| message: flase
+#| message: false
 #| echo: false
 
 library(ggnewscale)
