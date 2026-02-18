@@ -2,7 +2,7 @@
 title: Shiny App
 ---
 
-The [Shiny App](https://dcosme.shinyapps.io/explore-sca/) shows results from the preregistration described in the [preregistration example](@preregistration-example.qmd), which are a subset of analyses from a larger project.
+The [Shiny App](https://dcosme.shinyapps.io/explore-sca/) shows results from the preregistration described in the [preregistration example](@preregistration-example), which are a subset of analyses from a larger project.
 
 Please select the **Longitudinal model comparison --> AIC curve** tab.  
 
